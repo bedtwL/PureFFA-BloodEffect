@@ -1,13 +1,13 @@
 package me.bedtwL.addon.ffa;
 
-import me.bedtwL.ffa.api.PlayerKillEffect;
+import me.bedtwL.ffa.api.effect.PureKillEffect;
 import org.bukkit.Effect;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
-public class BloodExplodeEffect implements PlayerKillEffect {
+public class BloodExplodeEffect extends PureKillEffect {
     @Override
     public void killEffect(Location location, Player player) {
         playBloodExplodeEffect(location);

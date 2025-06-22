@@ -1,15 +1,15 @@
 package me.bedtwL.addon.ffa;
 
-import me.bedtwL.ffa.api.PlayerArrowHitEffect;
+import me.bedtwL.ffa.api.PureArrowHitEffect;
 import org.bukkit.Effect;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
-public class BloodArrowHitEffect implements PlayerArrowHitEffect {
+public class BloodArrowHitEffect extends PureArrowHitEffect {
     @Override
-    public void ArrowHitEffect(Location location, Player player) {
+    public void arrowHitEffect(Location location, Player player) {
         for (int i = 0; i < 1; i++) {
             location.getWorld().playEffect(location, Effect.STEP_SOUND, Material.REDSTONE_BLOCK);
         }

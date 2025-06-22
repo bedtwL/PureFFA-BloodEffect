@@ -1,13 +1,13 @@
 package me.bedtwL.addon.ffa;
 
-import me.bedtwL.ffa.api.PlayerHitEffect;
+import me.bedtwL.ffa.api.effect.PureHitEffect;
 import org.bukkit.Effect;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
-public class BloodEffect implements PlayerHitEffect {
+public class BloodEffect extends PureHitEffect {
     @Override
     public void hitEffect(Location location, Player player) {
         playBloodEffect(location);
