@@ -2,6 +2,8 @@ package me.bedtwL.addon.ffa;
 
 import me.bedtwL.ffa.api.EffectAddon;
 
+import java.util.UUID;
+
 public class BloodEffectMain implements EffectAddon {
     @Override
     public String getName() {
@@ -11,6 +13,10 @@ public class BloodEffectMain implements EffectAddon {
     @Override
     public String getAuthor() {
         return "bedtwL";
+    }
+    @Override
+    public UUID authorUUID() {
+        return UUID.fromString("f6edfcd8-f6b8-4e57-9367-8648953eaae2");
     }
 
     @Override
