@@ -6,6 +6,8 @@ import java.util.UUID;
 
 public class BloodEffectMain implements EffectAddon {
     @Override
+    public Integer getAPIVer() {return 1;}
+    @Override
     public String getName() {
         return "BloodEffect";
     }
@@ -21,9 +23,9 @@ public class BloodEffectMain implements EffectAddon {
 
     @Override
     public void onEnable() {
-        new BloodEffect().registerHitEffect();
-        new BloodExplodeEffect().registerKillEffect();
-        new BloodArrowHitEffect().registerArrowHitEffect();
+        new BloodEffect().registerHitEffect(this);
+        new BloodExplodeEffect().registerKillEffect(this);
+        new BloodArrowHitEffect().registerArrowHitEffect(this);
     }
 
     @Override
